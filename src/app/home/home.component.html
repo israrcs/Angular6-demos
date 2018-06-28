@@ -1,0 +1,28 @@
+<p>
+  home works!
+</p>
+
+<h2>Directives</h2>
+<p appBlackWhiteColor>Custom Directive</p>
+
+<p>*NgFor Directive & ngClass</p>
+<ul>
+  <li *ngFor="let person of data">
+    {{person.name}} is
+    <span [ngClass]="person.status ? 'online' : 'offline'"> {{person.status ? 'Online' : 'Offline'}} </span>
+  </li>
+</ul>
+<p>None Bind Able directive</p>
+Interpolation <span ngNonBindable>{{ name }}</span> we are use in HTML.
+
+<h2>Components</h2>
+<app-test></app-test>
+
+<h2>Pipes</h2>
+<p>Inbuild Pipes</p>
+This is US amount : {{amount | currency}}
+This is PKR amount : {{amount * 110 | currency: 'PKR'}}
+
+<p>custom pipes</p>
+This is {{format}} amount : {{usdAmount | currency: format}}
+<button (click)="toggleCurrency()">Toggle currency</button>
